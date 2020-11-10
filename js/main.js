@@ -1,14 +1,23 @@
 //Call setClock every 1 second
 setInterval(function(){
     let og = new Date();
-    let months = og.toLocaleString('default', {month: 'long'});
-    console.log(months)
-    
     //console.log(og.getDay(),og.getDate(), og.getMonth()+1, og.getFullYear());
     setClock(og.getHours(), og.getMinutes(), og.getSeconds());
-}, 500)
+}, 500);
 
+setDate();
 function setDate() {
+    let CURRDAY = new Date();
+    let dayNum = CURRDAY.getDate();
+    console.log(dayNum)
+    let day = CURRDAY.toLocaleDateString('default', {weekday: 'long'});
+    let month = CURRDAY.toLocaleDateString('default', {month: 'long'});
+
+    /* st nd  */
+
+    document.getElementById('dayNum').innerText = dayNum;
+    document.getElementById('day').innerText = day;
+    document.getElementById('month').innerText = month;
 
 }
 //Set the hours/minutes/seconds of the current time

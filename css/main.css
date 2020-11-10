@@ -28,9 +28,11 @@ body {
     align-items: center;
     background-image: url('../img/clock-bg.jpg');
     background-attachment: fixed;
+    flex-direction: column; 
 }
 .clock{
     width: 40vw;
+    min-width: 352px;
     margin: 0 auto;
     display: flex;
     height: 25vh;
@@ -42,9 +44,11 @@ body {
 }
 
 .time {
-    font-family: fantasy;
+    font-family: sans-serif;
+    font-weight: bolder;
     background-color: white;
     width: 10vw;
+    min-width: 93px;
     height:15vh;
     display: flex;
     font-size: 44px;
@@ -62,8 +66,16 @@ body {
     font-size: 44px;
     color: white;
 }
-
-
+.date-container {
+    width: 40vw;
+    min-width: 352px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    font-size: 2.15rem;
+    color: white;
+}
 
 #uiux-section-2 {
     background-color: whitesmoke;
