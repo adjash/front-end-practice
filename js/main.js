@@ -13,7 +13,10 @@ function setDate() {
     let day = CURRDAY.toLocaleDateString('default', {weekday: 'long'});
     let month = CURRDAY.toLocaleDateString('default', {month: 'long'});
 
-    /* st nd  */
+    let dateths = ["st","nd","rd","th"];
+    
+    /* st nd rd th th th th th th th  */
+    
 
     document.getElementById('dayNum').innerText = dayNum;
     document.getElementById('day').innerText = day;
